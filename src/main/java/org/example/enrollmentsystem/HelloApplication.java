@@ -10,7 +10,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         // Load FXML with correct path
-        Parent root = FXMLLoader.load(getClass().getResource("/org/example/enrollmentsystem/view/enrollment.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("EnrollmentSystem.fxml"));
 
         stage.setTitle("Student Enrollment System");
         stage.setScene(new Scene(root));
