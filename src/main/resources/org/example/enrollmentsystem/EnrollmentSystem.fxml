@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.enrollmentsystem.Controller">
    <children>
-      <ChoiceBox layoutX="112.0" layoutY="72.0" prefWidth="150.0" />
-      <ChoiceBox layoutX="333.0" layoutY="72.0" prefWidth="150.0" />
-      <Button layoutX="274.0" layoutY="146.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="enroll" layoutX="274.0" layoutY="146.0" mnemonicParsing="false" text="Enroll" />
       <TableView layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Student" />
           <TableColumn prefWidth="75.0" text="Course" />
         </columns>
       </TableView>
+      <ComboBox fx:id="studentsChoiceBox" layoutX="125.0" layoutY="72.0" prefWidth="150.0" promptText="Students" />
+      <ComboBox fx:id="coursesChoiceBox" layoutX="334.0" layoutY="72.0" prefWidth="150.0" promptText="Courses" />
    </children>
 </Pane>
