@@ -2,22 +2,22 @@ package org.example.enrollmentsystem;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("EnrollmentSystem.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("EnrollmentSystem!");
-        stage.setScene(scene);
+    public void start(Stage stage) throws Exception {
+        // Load FXML with correct path
+        Parent root = FXMLLoader.load(getClass().getResource("/org/example/enrollmentsystem/view/enrollment.fxml"));
+
+        stage.setTitle("Student Enrollment System");
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
