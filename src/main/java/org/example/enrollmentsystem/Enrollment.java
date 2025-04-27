@@ -1,23 +1,20 @@
 package org.example.enrollmentsystem;
 
 public class Enrollment {
-    private String studentId;
-    private String courseId;
-    private String semester;
+    private final String studentName;
+    private final String courseName;
 
-    public Enrollment(String studentId, String courseId, String semester) {
-        this.studentId = studentId;
-        this.courseId = courseId;
-        this.semester = semester;
+    public Enrollment(String studentName, String courseName) {
+        this.studentName = studentName;
+        this.courseName = courseName;
     }
 
-    // Getters and toString()
-    public String getStudentId() { return studentId; }
-    public String getCourseId() { return courseId; }
-    public String getSemester() { return semester; }
+    public String getStudentName() {
+        return studentName;
+    }
 
-    @Override
-    public String toString() {
-        return studentId + "|" + courseId + "|" + semester;
+    public String getCourseName() {
+        return courseName;
     }
 }
+
