@@ -18,6 +18,8 @@ public class Controller implements Initializable {
     protected ArrayList<String>studentNames = new ArrayList<>();
     protected ArrayList<String>courses = new ArrayList<>();
     @FXML
+    private Label FailureText;
+    @FXML
     private TableView<Enrollment> tableView = new TableView<>();
 
     @FXML
@@ -62,26 +64,42 @@ public class Controller implements Initializable {
     }
     @FXML
     protected void enrollAction(ActionEvent event)throws IOException {
+        FailureText.setVisible(false);
         String student = (String) studentsChoiceBox.getValue();
         System.out.println(student);
         String course = (String) coursesChoiceBox.getValue();
         System.out.println(course);
-        FileWriter fw = new FileWriter("src/main/java/org/example/enrollmentsystem/out.txt",true);
+        FileWriter fw = new FileWriter("src/main/java/org/example/enrollmentsystem/out.txt", true);
         PrintWriter p = new PrintWriter(fw);
-        p.println(student+","+course);
-        p.close();
-        System.out.println("done");
         File f = new File("src/main/java/org/example/enrollmentsystem/out.txt");
         Scanner s1 = new Scanner(f);
+        while (s1.hasNext()) {
+            String search = s1.nextLine();
+            System.out.println(search);
+            if (Objects.equals(student + "," + course, search)) {
+                FailureText.setVisible(true);
+                break;
+            }
+        }
+        s1.close();
+        System.out.println("Finish");
+        if (!FailureText.isVisible()){
+            p.println(student + "," + course);
+            p.close();
+            System.out.println("done");
+        }
 
+        s1 = new Scanner(f);
         ObservableList<Enrollment> enrollments = FXCollections.observableArrayList();
 
         while(s1.hasNext()){
                 s1.useDelimiter(",");
                 String name2 = s1.next();
+                name2 = name2.replaceAll("\n","");
                 System.out.println(name2);
                 s1.useDelimiter("\n");
                 String coursename = s1.next();
+                coursename=coursename.replaceAll(",","");
                 System.out.println(coursename);
                 enrollments.add(new Enrollment(name2,coursename));
         }

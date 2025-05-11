@@ -1,24 +1,5 @@
-Saif zaki 13253002,math
-Zyad Mostafa 13253003,english
-Saif zaki 13253002,english
 Zyad Mostafa 13253003,java
-Mohamed Kamal 13253005,java
-Mohamed Kamal 13253005,english
+Nour Eldien Salah 13253001,electronics
 Mohamed Ibrahim 13253004,java
-Zyad Mostafa 13253003,english
-Mohamed Ibrahim 13253004,java
-Nour Eldien Salah 13253001,english
-Nour Eldien Salah 13253001,java
-Nour Eldien Salah 13253001,logic
-Zyad Mostafa 13253003,logic
-Zyad Mostafa 13253003,java
-Zyad Mostafa 13253003,java
-Zyad Mostafa 13253003,java
-Zyad Mostafa 13253003,java
-Zyad Mostafa 13253003,electronics
-Zyad Mostafa 13253003,electronics
-Nour Eldien Salah 13253001,math
-Nour Eldien Salah 13253001,english
-Zyad Mostafa 13253003,math
-Mohamed Ibrahim 13253004,java
-null,null
+Mohamed Ibrahim 13253004,electronics
+Saif zaki 13253002,logic
